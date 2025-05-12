@@ -19,7 +19,7 @@
       color: #dfe6f1;
       overflow-x: hidden;
       background-attachment: fixed;
-    } 
+    }
     nav {
       position: fixed;
       top: 0;
@@ -28,17 +28,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 8px 0;
+      padding: 10px;
       z-index: 1000;
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 15px rgba(0, 255, 255, 0.2);
+      flex-wrap: wrap;
+      gap: 15px;
     }
     nav a {
       color: #8be9fd;
-      margin: 0 12px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       position: relative;
       transition: color 0.3s;
     }
@@ -84,13 +85,13 @@
       transform: scale(1.08) rotate(3deg);
     }
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: #ffffff;
       margin-bottom: 10px;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #bdc3c7;
     }
     section {
@@ -99,7 +100,7 @@
       margin: auto;
     }
     h2 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       text-align: center;
       margin-bottom: 40px;
       color: #50fa7b;
@@ -115,7 +116,7 @@
     }
     .projects-grid, .skills-grid, .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
       margin-top: 40px;
     }
@@ -195,13 +196,29 @@
       background: linear-gradient(135deg, #8be9fd, #50fa7b);
       transform: scale(1.05);
     }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      nav {
+        gap: 10px;
+        padding: 8px;
+      }
+      nav a {
+        font-size: 0.8rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <nav>
-  <a href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#projects">Projects</a>
