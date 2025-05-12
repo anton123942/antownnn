@@ -13,7 +13,7 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
-    body {
+    html, body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #0a0f2c, #1c1f4a);
       color: #dfe6f1;
@@ -28,15 +28,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      padding: 15px 0;
+      padding: 10px 0;
       z-index: 1000;
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 15px rgba(0, 255, 255, 0.2);
     }
     nav a {
       color: #8be9fd;
-      margin: 8px 20px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
@@ -59,17 +58,6 @@
     nav a:hover::after {
       width: 100%;
     }
-    /* Mobile Responsive */
-    @media (max-width: 600px) {
-      nav {
-        padding: 10px 5px;
-      }
-      nav a {
-        margin: 6px 10px;
-        font-size: 0.9rem;
-      }
-    }
-
     header {
       height: 100vh;
       display: flex;
@@ -77,14 +65,14 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding-top: 80px;
+      padding-top: 90px;
       background: url('https://images.unsplash.com/photo-1581090700227-1c065c9efde2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
       background-blend-mode: overlay;
       background-color: rgba(0, 0, 20, 0.6);
     }
     header img {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
       border: 5px solid #8be9fd;
@@ -96,30 +84,30 @@
       transform: scale(1.08) rotate(3deg);
     }
     header h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: #ffffff;
       margin-bottom: 10px;
     }
     header p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #bdc3c7;
     }
     section {
-      padding: 100px 20px;
+      padding: 80px 20px;
       max-width: 1200px;
       margin: auto;
     }
     h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       color: #50fa7b;
       text-shadow: 0 0 10px rgba(80, 250, 123, 0.5);
     }
     .section-content {
       text-align: center;
-      font-size: 1.1rem;
+      font-size: 1rem;
       line-height: 1.8;
       color: #cfd9e0;
       max-width: 800px;
@@ -127,15 +115,15 @@
     }
     .projects-grid, .skills-grid, .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
     }
     .project, .service {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(138, 255, 245, 0.2);
       border-radius: 15px;
-      padding: 25px;
+      padding: 20px;
       text-align: center;
       backdrop-filter: blur(10px);
       box-shadow: 0 0 15px rgba(138, 255, 245, 0.2);
@@ -147,15 +135,15 @@
     }
     .skill {
       text-align: center;
-      padding: 20px;
+      padding: 15px;
     }
     .circle {
       position: relative;
-      width: 120px;
-      height: 120px;
+      width: 110px;
+      height: 110px;
       background: conic-gradient(var(--color) calc(var(--percentage) * 1%), rgba(255,255,255,0.1) 0%);
       border-radius: 50%;
-      margin: 0 auto 20px;
+      margin: 0 auto 15px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -165,22 +153,22 @@
     .circle::before {
       content: '';
       position: absolute;
-      width: 85px;
-      height: 85px;
+      width: 75px;
+      height: 75px;
       background: #0a0f2c;
       border-radius: 50%;
       z-index: 1;
     }
     .number {
       position: relative;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--color);
       z-index: 2;
     }
     .skill h3, .service h3 {
       margin-top: 10px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #dfe6f1;
     }
     footer {
@@ -188,13 +176,13 @@
       padding: 20px;
       font-size: 0.9rem;
       background: rgba(10, 10, 40, 0.9);
-      margin-top: 50px;
+      margin-top: 30px;
       color: #a4b0be;
     }
     a.button {
       display: inline-block;
       margin-top: 20px;
-      padding: 12px 30px;
+      padding: 10px 25px;
       border-radius: 50px;
       background: linear-gradient(135deg, #50fa7b, #8be9fd);
       color: #0a0f2c;
@@ -206,6 +194,21 @@
     a.button:hover {
       background: linear-gradient(135deg, #8be9fd, #50fa7b);
       transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+      }
+      section {
+        padding: 60px 15px;
+      }
     }
   </style>
 </head>
