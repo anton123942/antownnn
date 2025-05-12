@@ -33,18 +33,18 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 15px rgba(0, 255, 255, 0.2);
       flex-wrap: wrap;
-      gap: 15px; /* Bigger default gap */
+      gap: 8px; /* Bigger default gap */
     }
-    nav a {
-      color: #8be9fd;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      position: relative;
-      transition: color 0.3s;
-      padding: 8px 12px;
-      border-radius: 5px;
-    }
+     nav a {
+    color: #8be9fd;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s;
+    padding: 8px 14px;
+    white-space: nowrap; /* IMPORTANT: prevent text from breaking */
+  }
     nav a::after {
       content: '';
       width: 0%;
@@ -200,16 +200,15 @@
     }
 
     /* Responsive for small phones */
-    @media (max-width: 600px) {
-      nav {
-        gap: 8px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      nav a {
-        font-size: 0.8rem;
-        padding: 6px 8px;
-      }
+   @media (max-width: 600px) {
+    nav {
+      padding: 8px 10px;
+      gap: 6px;
+    }
+    nav a {
+      font-size: 0.8rem; /* make text smaller on phones */
+      padding: 6px 10px; /* tighter padding */
+    }
       header h1 {
         font-size: 1.5rem;
       }
